@@ -1,4 +1,4 @@
-### Example on how to use Simple-CDD to build a custom Debian ISO
+### Example on how to use Simple-CDD to build a custom Debian 8.0.x ISO
 
 1. Create a virtual machine with Debian 8.0.2 (Jesse)
 1. Install simple-cdd
@@ -9,9 +9,10 @@
 1. Browse through /usr/share/simple-cdd
 
   ```bash
-  $ ls -l /usr/share/simple-cdd
-  $ less /usr/share/simple-cdd/FAQ
-  $ less /usr/share/simple-cdd/README
+  $ ls -l /usr/share/simple-cdd/
+  $ less /usr/share/doc/simple-cdd/FAQ
+  $ less /usr/share/doc/simple-cdd/README
+  $ zless /usr/share/doc/simple-cdd/examples/simple-cdd.conf.detailed.gz
   ```
 1. Create a working directory
 
