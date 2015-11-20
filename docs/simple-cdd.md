@@ -2,21 +2,25 @@
 
 1. Create a virtual machine with Debian 8.0.2 (Jesse)
 1. Install simple-cdd
+
   ```bash
   $ sudo apt-get update && sudo apt-get install simple-cdd
   ```
 1. Browse through /usr/share/simple-cdd
+
   ```bash
   $ ls -l /usr/share/simple-cdd
   $ less /usr/share/simple-cdd/FAQ
   $ less /usr/share/simple-cdd/README
   ```
 1. Create a working directory
+
   ```bash
   $ mkdir ~/simple-cdd-01
   $ cd ~/simple-cdd-01
   ```
 1. Create a simple-cdd-01.conf file
+
   ```bash
   $ vim simple-cdd-01.conf
   ```
