@@ -38,15 +38,15 @@
   auto_profiles="simple-cdd-01"
 
   ## Distribution configuration
-  profiles_udeb_dist="jesse"
-  export CODENAME="jesse"
-  dist="jesse"
+  profiles_udeb_dist="jessie"
+  export CODENAME="jessie"
+  dist="jessie"
 
   # Mirror configuration
   mirror_components="main contrib non-free"
   use_security_mirror="true"
-  debian_mirror="http://ftp.us.debian.org/debian/"
-  security_mirror="http://security.debian.org/"
+  debian_mirror="http://ftp.us.debian.org/debian"
+  security_mirror="http://security.debian.org"
 
   # Set to automatically boot after a timeout, in tenth's of a second.
   # i.e. for a 5 second timeout:
@@ -65,7 +65,7 @@
 
 1. Create a description file
   ```bash
-  $ echo "Example simple-cdd iso creation" > profiles/simple-cdd-01.description
+  $ echo "Example simple-cdd-01 iso creation" > profiles/simple-cdd-01.description
   ```
 
 1. Create a Debian Preseed file
@@ -74,7 +74,7 @@
   ```
   add the following
   ```
-  <to do>
+  # simple-cdd-01 preceed file
   ```
 
 1. Create a packages file
@@ -86,7 +86,7 @@
   ```
   add the following:
   ```
-  <to do>
+  # simple-cdd-01 packages file
   ```
 
 1. Create a post-install script
@@ -96,13 +96,13 @@
   ```
   add the following:
   ```
-  <to do>
+  # simple-cdd-01 post-install script
   ```
 
 1. Build an iso
 
   ```bash
-  build-simple-cdd --conf simple-cdd-01.conf --force-preseed
+  build-simple-cdd --conf ./simple-cdd-01.conf --force-preseed
   ```
 
 Resources:
