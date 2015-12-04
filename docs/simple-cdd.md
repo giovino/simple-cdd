@@ -27,6 +27,12 @@
   cd simple-cdd/simple-cdd-01
   build-simple-cdd --conf ./simple-cdd-01.conf --force-preseed
   ```
+1. Transfer the ISO image to your host machine
+
+  ```bash
+  scp simple-cdd:/home/<username>/simple-cdd/simple-cdd-01/images/debian-8.2-amd64-CD-1.iso .
+  ```
+1. Test the new ISO with your virtualization software
 
 ## Manual creation
 
