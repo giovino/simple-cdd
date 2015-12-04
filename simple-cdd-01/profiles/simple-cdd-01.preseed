@@ -1,1 +1,60 @@
-# simple-cdd-01 preceed file
+# simple-cdd-01 preseed file
+
+#### Preseed file (for jessie)
+
+### Localization
+# Preseeding only locale sets language, country and locale.
+d-i debian-installer/locale string en_US
+
+# Keyboard selection.
+d-i keyboard-configuration/xkb-keymap select us
+
+### Network configuration
+d-i netcfg/dhcp_failed note
+d-i netcfg/dhcp_options select Configure network manually
+
+# attempt to load non-free firmware if needed
+d-i hw-detect/load_firmware boolean true
+
+### Mirror settings
+#d-i mirror/country string manual
+#d-i mirror/http/hostname string http.us.debian.org
+#d-i mirror/http/directory string /debian
+#d-i mirror/http/proxy string
+
+### Account setup
+d-i passwd/root-login boolean false
+
+# To create a normal user account.
+d-i passwd/user-fullname string Acme Administrator
+d-i passwd/username string acme
+
+# password = 'acme corp preseed password'
+# command: 'printf "acme corp preseed password" | mkpasswd -s -m md5'
+d-i passwd/user-password-crypted password $1$buGYbEQ5$OBW15db5jU6P4Wghuh51Z0
+
+### Clock and time zone setup
+# set timezone
+d-i clock-setup/utc boolean true
+
+# Use NTP to set the clock during the install
+d-i clock-setup/ntp boolean true
+
+### Partitioning
+d-i partman-auto/method string lvm
+d-i partman-lvm/device_remove_lvm boolean true
+d-i partman-md/device_remove_md boolean true
+d-i partman-lvm/confirm boolean true
+d-i partman-lvm/confirm_nooverwrite boolean true
+d-i partman-auto/choose_recipe select multi
+
+### Apt setup
+d-i apt-setup/non-free boolean true
+d-i apt-setup/contrib boolean true
+
+### Package selection
+tasksel tasksel/first multiselect standard, ssh-server
+popularity-contest popularity-contest/participate boolean false
+
+### Boot loader installation
+d-i grub-installer/only_debian boolean true
