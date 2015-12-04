@@ -65,7 +65,11 @@
 
 1. Create a description file
   ```bash
-  $ echo "Example simple-cdd-01 iso creation" > profiles/simple-cdd-01.description
+  $ vim profiles/simple-cdd-01.description
+  ```
+  add the following
+  ```bash
+  # Example simple-cdd-01 iso creation
   ```
 
 1. Create a Debian Preseed file
