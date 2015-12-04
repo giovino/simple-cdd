@@ -6,6 +6,28 @@
   ```bash
   $ sudo apt-get update && sudo apt-get install simple-cdd
   ```
+
+## Use this repositories example simple-cdd configuration
+
+1. Install git
+
+  ```bash
+  $sudo apt-get update && sudo apt-get install git
+  ```
+1. Close simple-cdd
+
+  ```bash
+  $ git clone git@github.com:giovino/simple-cdd.git
+  ```
+1. Build an iso
+
+  ```bash
+  cd simple-cdd/simple-cdd-01
+  build-simple-cdd --conf ./simple-cdd-01.conf --force-preseed
+  ```
+
+## Manual creation
+
 1. Browse through /usr/share/simple-cdd
 
   ```bash
@@ -78,7 +100,7 @@
   ```
   add the following
   ```
-  # simple-cdd-01 preceed file
+  # simple-cdd-01 preseed file
   ```
 
 1. Create a packages file
