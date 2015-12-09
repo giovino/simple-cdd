@@ -16,10 +16,10 @@
   ```bash
   $sudo apt-get update && sudo apt-get install git
   ```
-1. Clone simple-cdd
+1. git clone Clone simple-cdd
 
   ```bash
-  $ git clone git@github.com:giovino/simple-cdd.git
+  $ git clone https://github.com/giovino/simple-cdd.git
   ```
 1. Build an iso
 
