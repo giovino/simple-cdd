@@ -10,8 +10,7 @@ d-i debian-installer/locale string en_US
 d-i keyboard-configuration/xkb-keymap select us
 
 ### Network configuration
-d-i netcfg/dhcp_failed note
-d-i netcfg/dhcp_options select Configure network manually
+d-i netcfg/disable_autoconfig boolean true
 
 # attempt to load non-free firmware if needed
 d-i hw-detect/load_firmware boolean true
@@ -36,6 +35,7 @@ d-i passwd/user-password-crypted password $1$buGYbEQ5$OBW15db5jU6P4Wghuh51Z0
 ### Clock and time zone setup
 # set timezone
 d-i clock-setup/utc boolean true
+d-i time/zone string UTC
 
 # Use NTP to set the clock during the install
 d-i clock-setup/ntp boolean true
