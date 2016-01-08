@@ -77,11 +77,6 @@ Example on how to use Simple-CDD to build a custom Debian 8.0.x ISO
 3. Remote access
  * OpenSSH Server installed and listening on port 22
  
-## Issues
-
-1. /etc/hostname is 'unassinged'
- * setting ```d-i netcfg/hostname string somehost``` in the preceed config may address this
-
 ## Resources
 
 1. [Debian Handbook - 12.3.3. Simple-CDD: The All-In-One Solution](https://debian-handbook.info/browse/stable/sect.automated-installation.html)
