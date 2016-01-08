@@ -1,4 +1,6 @@
-# Example on how to use Simple-CDD to build a custom Debian 8.0.x ISO
+# Introduction
+
+Example on how to use Simple-CDD to build a custom Debian 8.0.x ISO
 
 ## Prerequisites
 
@@ -34,7 +36,53 @@
   ```
 1. Test the new ISO with your virtualization software
 
-Resources:
+## Debian installer questions that require answers
+
+1. Select a language
+ * Language -> English
+
+2. Select your location
+ * Country, territory or area -> United states
+
+3. Configure the keyboard
+ * Keymap to use: -> American English
+ 
+4. Configure the network
+ * IP address -> 192.168.1.215
+ * Netmask -> 255.255.255.0
+ * Gateway -> 192.168.1.1
+ * Name server addresses -> 192.168.1.1
+
+5. Partition Disks
+ * Write changes to disk -> Yes
+
+6. Configure the package manager
+ * Debian archive mirror country -> United States
+ * Debian archive mirror -> ftp.us.debian.org
+ * HTTP proxy information -> <blank>
+
+7. Install grub boot loader on a hard disk
+ * Device for boot loader installation -> /dev/sda
+
+## System configuration post installation
+
+1. User information
+ * user: acme
+ * password: acme corp preseed password
+ * sudo privilegies: Yes
+ 
+2. Hostname
+ * unassigned
+ 
+3. Remote access
+ * OpenSSH Server installed and listening on port 22
+ 
+## Issues
+
+1. /etc/hostname is "unassinged"
+ * setting ```d-i netcfg/hostname string somehost``` in the preceed config may address this
+
+## Resources
 
 1. [Debian Handbook - 12.3.3. Simple-CDD: The All-In-One Solution](https://debian-handbook.info/browse/stable/sect.automated-installation.html)
 1. [Debian Wiki - Simple-CDD Howto](https://wiki.debian.org/Simple-CDD/Howto)
