@@ -71,15 +71,15 @@ Example on how to use Simple-CDD to build a custom Debian 8.0.x ISO
  * password: acme corp preseed password
  * sudo privilegies: Yes
  
-2. Hostname
- * unassigned
+2. System Hostname
+ * /etc/hostname is 'unassigned'
  
 3. Remote access
  * OpenSSH Server installed and listening on port 22
  
 ## Issues
 
-1. /etc/hostname is "unassinged"
+1. /etc/hostname is 'unassinged'
  * setting ```d-i netcfg/hostname string somehost``` in the preceed config may address this
 
 ## Resources
